@@ -11,3 +11,8 @@
 # TODOs
 - [ ] Copy Paste Style Popup
 - [ ] Hook more objc runtime functions related to swizzling
+
+# Possible Uses
+- Disable swizzling in the whole app
+- Inspect the use of swizzling
+- Decide to allow / disallow swizzling on a per case basis
