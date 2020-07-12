@@ -1,5 +1,5 @@
 # SwizzleBlocker
-🚷Proof of concept for a library that can intercept calls to method_exchangeImplementations and block them
+🚷Proof of concept for a library that can intercept calls to `method_exchangeImplementations` and block them
 
 
 ⚠️ **This is in no way safe. Please don't ever use this in production code**
