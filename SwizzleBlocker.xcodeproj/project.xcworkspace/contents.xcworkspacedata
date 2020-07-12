@@ -2,6 +2,6 @@
 <Workspace
    version = "1.0">
    <FileRef
-      location = "self:SwizzleBlockeriOS.xcodeproj">
+      location = "self:/Users/tim/Developer/SwizzleBlockeriOS/SwizzleBlocker.xcodeproj">
    </FileRef>
 </Workspace>

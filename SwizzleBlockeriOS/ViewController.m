@@ -7,17 +7,39 @@
 //
 
 #import "ViewController.h"
+#import <objc/runtime.h>
 
 @interface ViewController ()
+@property (weak, nonatomic) IBOutlet UILabel *label;
 
 @end
 
 @implementation ViewController
 
-- (void)viewDidLoad {
-    [super viewDidLoad];
-    // Do any additional setup after loading the view.
+- (void)someMethod {
+    [self.label setText:@"no swizzling"];
+    NSLog(@"no swizzling");
 }
 
+- (void)someSwizzeledMethod {
+    [self.label setText:@"some swizzling"];
+    NSLog(@"some swizzling");
+}
+
+- (IBAction)buttonClicked:(id)sender {
+    [self someMethod];
+}
+
+- (IBAction)swizzleMethod:(id)sender {
+    Class class = [self class];
+
+    SEL originalSelector = @selector(someMethod);
+    SEL swizzledSelector = @selector(someSwizzeledMethod);
+
+    Method originalMethod = class_getInstanceMethod(class, originalSelector);
+    Method swizzledMethod = class_getInstanceMethod(class, swizzledSelector);
+
+    method_exchangeImplementations(originalMethod, swizzledMethod);
+}
 
 @end
