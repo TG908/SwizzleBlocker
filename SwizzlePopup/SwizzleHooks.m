@@ -14,13 +14,14 @@ UIWindowScene* getWindowScene() {
     UIWindowScene *windowScene;
     for (UIScene *scene in [UIApplication sharedApplication].connectedScenes) {
         if (scene.activationState == UISceneActivationStateForegroundActive) {
-            windowScene = scene;
+            windowScene = (UIWindowScene *) scene;
         }
     }
     return windowScene;
 }
 
 void showBanner(NSString *message) {
+    NSLog(@"%@", message);
     dispatch_async(dispatch_get_main_queue(), ^{
     UIWindowScene *windowScene = getWindowScene();
     CGRect frame = CGRectMake(0, 0, windowScene.screen.bounds.size.width, 130);
@@ -38,11 +39,12 @@ void showBanner(NSString *message) {
 
     UILabel *label = [[UILabel alloc] initWithFrame:labelFrame];
     label.backgroundColor = [UIColor colorWithWhite:1.0 alpha:0.7];
+    label.textColor = UIColor.blackColor;
     label.textAlignment = NSTextAlignmentCenter;
     label.text = message;
     label.font = [UIFont systemFontOfSize:11];
     label.numberOfLines = 0;
-    label.minimumScaleFactor = 0.5;
+    label.minimumScaleFactor = 0.4;
     label.layer.cornerRadius = 24;
     label.layer.masksToBounds = true;
     
@@ -71,7 +73,7 @@ void showBanner(NSString *message) {
     });
 }
 
-NSString* getFrameworkName() {
+__attribute__((always_inline)) NSString* getFrameworkName() {
     NSString *sourceString = [[NSThread callStackSymbols] objectAtIndex:1];
     NSCharacterSet *separatorSet = [NSCharacterSet characterSetWithCharactersInString:@" -[]+?.,"];
     NSMutableArray *array = [NSMutableArray arrayWithArray:[sourceString  componentsSeparatedByCharactersInSet:separatorSet]];
