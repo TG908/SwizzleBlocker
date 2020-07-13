@@ -10,8 +10,6 @@
 #import <dlfcn.h>
 #import "SwizzleHooks.h"
 
-UIWindow *window;
-
 UIWindowScene* getWindowScene() {
     UIWindowScene *windowScene;
     for (UIScene *scene in [UIApplication sharedApplication].connectedScenes) {
@@ -32,7 +30,7 @@ void showBanner(NSString *message) {
     UIViewController *viewController = [[UIViewController alloc] init];
     viewController.view.backgroundColor = UIColor.clearColor;
 
-    window = [[UIWindow alloc] initWithWindowScene:windowScene];
+    UIWindow *window = [[UIWindow alloc] initWithWindowScene:windowScene];
     window.frame = frame;
     window.windowLevel = UIWindowLevelAlert + 1;
     window.backgroundColor = UIColor.clearColor;
@@ -68,7 +66,7 @@ void showBanner(NSString *message) {
     [UIView animateWithDuration:3 delay:6 options:UIViewAnimationOptionCurveEaseOut animations:^{
         shadowView.alpha = 0;
     } completion:^(BOOL finished) {
-        window = nil;
+        [window resignKeyWindow];
     }];
     });
 }
