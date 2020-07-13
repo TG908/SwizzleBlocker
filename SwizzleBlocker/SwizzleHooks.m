@@ -10,19 +10,18 @@
 #import <dlfcn.h>
 #import "SwizzleHooks.h"
 
-UIWindow *window;
-
 OBJC_EXPORT void
 method_exchangeImplementations(Method _Nonnull m1, Method _Nonnull m2) {
-    NSLog(@"Swizzling Alert!");
+    dispatch_async(dispatch_get_main_queue(), ^{
     UIWindowScene *windowScene;
     for (UIScene *scene in [UIApplication sharedApplication].connectedScenes) {
         if (scene.activationState == UISceneActivationStateForegroundActive) {
-            windowScene = scene;
+            windowScene = (UIWindowScene*)scene;
         }
     }
+    UIWindow *window = [[UIWindow alloc] initWithWindowScene:windowScene];
 
-    NSString *message = [NSString stringWithFormat:@"Someone is trying to replace %s with %s", method_getName(m1), method_getName(m2)];
+    NSString *message = [NSString stringWithFormat:@"Someone is trying to replace %s with %s", sel_getName(method_getName(m1)), sel_getName(method_getName(m2))];
 
     UIAlertController *alert = [UIAlertController alertControllerWithTitle:@"Method Swizzling" message:message preferredStyle:UIAlertControllerStyleAlert];
 
@@ -31,21 +30,21 @@ method_exchangeImplementations(Method _Nonnull m1, Method _Nonnull m2) {
         void *handle = dlopen("/System/Library/Frameworks/Foundation.framework/Foundation", RTLD_LAZY);
         void (*original_method_exchangeImplementations)(Method, Method) = dlsym(handle, "method_exchangeImplementations");
         original_method_exchangeImplementations(m1,m2);
-        window = nil;
+        [window resignKeyWindow];
     }];
 
     UIAlertAction *secondaryAction = [UIAlertAction actionWithTitle:@"Deny" style:UIAlertActionStyleCancel handler:^(UIAlertAction * _Nonnull action) {
         NSLog(@"swizzling denied");
-        window = nil;
+        [window resignKeyWindow];
     }];
 
     [alert addAction:defaultAction];
     [alert addAction:secondaryAction];
 
-    window = [[UIWindow alloc] initWithWindowScene:windowScene];
     UIViewController *viewController = [[UIViewController alloc] init];
     window.rootViewController = viewController;
     window.windowLevel = UIWindowLevelAlert + 1;
     [window makeKeyAndVisible];
     [viewController presentViewController:alert animated:YES completion:nil];
+    });
 }
