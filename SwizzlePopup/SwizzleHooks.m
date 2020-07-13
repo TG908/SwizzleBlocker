@@ -24,8 +24,8 @@ void showBanner(NSString *message) {
     NSLog(@"%@", message);
     dispatch_async(dispatch_get_main_queue(), ^{
     UIWindowScene *windowScene = getWindowScene();
-    CGRect frame = CGRectMake(0, 0, windowScene.screen.bounds.size.width, 130);
-    CGRect innerFrame = CGRectInset(frame, 40, 40);
+    CGRect frame = CGRectMake(0, 0, windowScene.screen.bounds.size.width, 100);
+    CGRect innerFrame = CGRectInset(frame, 16, 20);
     CGRect labelFrame = CGRectMake(0, 0, innerFrame.size.width, innerFrame.size.height);
     
     UIViewController *viewController = [[UIViewController alloc] init];
@@ -45,28 +45,31 @@ void showBanner(NSString *message) {
     label.font = [UIFont systemFontOfSize:11];
     label.numberOfLines = 0;
     label.minimumScaleFactor = 0.4;
-    label.layer.cornerRadius = 24;
+    label.layer.cornerRadius = 28;
     label.layer.masksToBounds = true;
     
     UIView *shadowView = [[UIView alloc] initWithFrame:innerFrame];
     shadowView.backgroundColor = UIColor.clearColor;
     shadowView.layer.shadowColor = UIColor.blackColor.CGColor;
-    shadowView.layer.shadowRadius = 12;
+    shadowView.layer.shadowRadius = 8;
     shadowView.layer.shadowOpacity = 0.2;
-    shadowView.layer.shadowOffset = CGSizeMake(4, 4);
+    shadowView.layer.shadowOffset = CGSizeMake(4,4);
     shadowView.alpha = 0;
+    shadowView.frame = CGRectOffset(innerFrame, 0, -innerFrame.size.height - 10);
     
     [viewController.view addSubview:shadowView];
     [shadowView addSubview:label];
 
     [window makeKeyAndVisible];
     
-    [UIView animateWithDuration:3 delay:0 options:UIViewAnimationOptionCurveEaseIn animations:^{
+    [UIView animateWithDuration:0.3 delay:0 options:UIViewAnimationOptionCurveEaseInOut animations:^{
         shadowView.alpha = 1;
+        shadowView.frame = innerFrame;
     } completion:nil];
     
-    [UIView animateWithDuration:3 delay:6 options:UIViewAnimationOptionCurveEaseOut animations:^{
+    [UIView animateWithDuration:0.3 delay:6 options:UIViewAnimationOptionCurveEaseInOut animations:^{
         shadowView.alpha = 0;
+        shadowView.frame = CGRectOffset(innerFrame, 0, -(innerFrame.size.height + 10));
     } completion:^(BOOL finished) {
         [window resignKeyWindow];
     }];
