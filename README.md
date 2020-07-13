@@ -18,7 +18,7 @@
 1. Download the project and build the frameworks
 2. Drag the framework you want to use in your xcode project.
 3. Select sign and embed for the framework
-4. Build and run your app
+4. Build and run your app (make sure to use static linking for the frameworks you want to inspect)
 
 # TODOs
 - [x] Copy Paste Style Popup
