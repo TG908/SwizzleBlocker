@@ -23,6 +23,7 @@ UIWindowScene* getWindowScene() {
 }
 
 void showBanner(NSString *message) {
+    dispatch_async(dispatch_get_main_queue(), ^{
     UIWindowScene *windowScene = getWindowScene();
     CGRect frame = CGRectMake(0, 0, windowScene.screen.bounds.size.width, 130);
     CGRect innerFrame = CGRectInset(frame, 40, 40);
@@ -69,6 +70,7 @@ void showBanner(NSString *message) {
     } completion:^(BOOL finished) {
         window = nil;
     }];
+    });
 }
 
 NSString* getFrameworkName() {
