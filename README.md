@@ -11,14 +11,14 @@
 
 ## Swizzle Notification
 
+<img src="https://user-images.githubusercontent.com/7985149/87261763-cddb9300-c4b7-11ea-9cc0-c6b555c3f06d.png" width="400"/>
+
 # Installation
 
 1. Download the project and build the frameworks
 2. Drag the framework you want to use in your xcode project.
 3. Select sign and embed for the framework
 4. Build and run your app
-
-![Simulator Screen Shot - iPhone SE (2nd generation) - 2020-07-13 at 03 19 16](https://user-images.githubusercontent.com/7985149/87261763-cddb9300-c4b7-11ea-9cc0-c6b555c3f06d.png)
 
 # TODOs
 - [x] Copy Paste Style Popup
