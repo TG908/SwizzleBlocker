@@ -10,12 +10,6 @@
 #import <dlfcn.h>
 #import "SwizzleHooks.h"
 
-OBJC_EXPORT IMP _Nonnull
-method_setImplementation(Method _Nonnull m, IMP _Nonnull imp) {
-    printf("called hooker\n");
-    return imp;
-}
-
 UIWindow *window;
 
 OBJC_EXPORT void

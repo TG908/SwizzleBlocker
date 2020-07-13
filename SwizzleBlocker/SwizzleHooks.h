@@ -11,9 +11,6 @@
 
 #import <objc/runtime.h>
 
-OBJC_EXPORT IMP _Nonnull
-method_setImplementation(Method _Nonnull m, IMP _Nonnull imp);
-
 OBJC_EXPORT void
 method_exchangeImplementations(Method _Nonnull m1, Method _Nonnull m2);
 

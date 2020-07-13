@@ -14,9 +14,9 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "2202F3B824BB3B2300BCB226"
-               BuildableName = "SwizzleBlockeriOS.app"
-               BlueprintName = "SwizzleBlockeriOS"
+               BlueprintIdentifier = "2202F3D924BB3B4400BCB226"
+               BuildableName = "SwizzleBlocker.framework"
+               BlueprintName = "SwizzleBlocker"
                ReferencedContainer = "container:SwizzleBlocker.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
@@ -28,16 +28,6 @@
       selectedLauncherIdentifier = "Xcode.DebuggerFoundation.Launcher.LLDB"
       shouldUseLaunchSchemeArgsEnv = "YES">
       <Testables>
-         <TestableReference
-            skipped = "NO">
-            <BuildableReference
-               BuildableIdentifier = "primary"
-               BlueprintIdentifier = "22A24DE924BBDC9C00908795"
-               BuildableName = "SwizzlePopupTests.xctest"
-               BlueprintName = "SwizzlePopupTests"
-               ReferencedContainer = "container:SwizzleBlocker.xcodeproj">
-            </BuildableReference>
-         </TestableReference>
       </Testables>
    </TestAction>
    <LaunchAction
@@ -50,16 +40,6 @@
       debugDocumentVersioning = "YES"
       debugServiceExtension = "internal"
       allowLocationSimulation = "YES">
-      <BuildableProductRunnable
-         runnableDebuggingMode = "0">
-         <BuildableReference
-            BuildableIdentifier = "primary"
-            BlueprintIdentifier = "2202F3B824BB3B2300BCB226"
-            BuildableName = "SwizzleBlockeriOS.app"
-            BlueprintName = "SwizzleBlockeriOS"
-            ReferencedContainer = "container:SwizzleBlocker.xcodeproj">
-         </BuildableReference>
-      </BuildableProductRunnable>
    </LaunchAction>
    <ProfileAction
       buildConfiguration = "Release"
@@ -67,16 +47,15 @@
       savedToolIdentifier = ""
       useCustomWorkingDirectory = "NO"
       debugDocumentVersioning = "YES">
-      <BuildableProductRunnable
-         runnableDebuggingMode = "0">
+      <MacroExpansion>
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "2202F3B824BB3B2300BCB226"
-            BuildableName = "SwizzleBlockeriOS.app"
-            BlueprintName = "SwizzleBlockeriOS"
+            BlueprintIdentifier = "2202F3D924BB3B4400BCB226"
+            BuildableName = "SwizzleBlocker.framework"
+            BlueprintName = "SwizzleBlocker"
             ReferencedContainer = "container:SwizzleBlocker.xcodeproj">
          </BuildableReference>
-      </BuildableProductRunnable>
+      </MacroExpansion>
    </ProfileAction>
    <AnalyzeAction
       buildConfiguration = "Debug">

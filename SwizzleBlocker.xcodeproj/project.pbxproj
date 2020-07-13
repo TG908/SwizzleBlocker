@@ -15,17 +15,35 @@
 		2202F3CC24BB3B2600BCB226 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2202F3CA24BB3B2600BCB226 /* LaunchScreen.storyboard */; };
 		2202F3CF24BB3B2600BCB226 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 2202F3CE24BB3B2600BCB226 /* main.m */; };
 		2202F3DE24BB3B4400BCB226 /* SwizzleBlocker.h in Headers */ = {isa = PBXBuildFile; fileRef = 2202F3DC24BB3B4400BCB226 /* SwizzleBlocker.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		2202F3E124BB3B4400BCB226 /* SwizzleBlocker.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2202F3DA24BB3B4400BCB226 /* SwizzleBlocker.framework */; };
 		2202F3E924BB3BCF00BCB226 /* SwizzleHooks.m in Sources */ = {isa = PBXBuildFile; fileRef = 2202F3E824BB3BCF00BCB226 /* SwizzleHooks.m */; };
+		22A24DEB24BBDC9C00908795 /* SwizzlePopup.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 22A24DE224BBDC9C00908795 /* SwizzlePopup.framework */; };
+		22A24DF224BBDC9C00908795 /* SwizzlePopupTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 22A24DF124BBDC9C00908795 /* SwizzlePopupTests.m */; };
+		22A24DF424BBDC9C00908795 /* SwizzlePopup.h in Headers */ = {isa = PBXBuildFile; fileRef = 22A24DE424BBDC9C00908795 /* SwizzlePopup.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		22A24DF724BBDC9C00908795 /* SwizzlePopup.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 22A24DE224BBDC9C00908795 /* SwizzlePopup.framework */; };
+		22A24E0224BBDCCC00908795 /* SwizzleHooks.m in Sources */ = {isa = PBXBuildFile; fileRef = 22A24E0124BBDCCC00908795 /* SwizzleHooks.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
-		2202F3DF24BB3B4400BCB226 /* PBXContainerItemProxy */ = {
+		22A24DEC24BBDC9C00908795 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = 2202F3B124BB3B2300BCB226 /* Project object */;
 			proxyType = 1;
-			remoteGlobalIDString = 2202F3D924BB3B4400BCB226;
-			remoteInfo = SwizzleBlocker;
+			remoteGlobalIDString = 22A24DE124BBDC9C00908795;
+			remoteInfo = SwizzlePopup;
+		};
+		22A24DEE24BBDC9C00908795 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 2202F3B124BB3B2300BCB226 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 2202F3B824BB3B2300BCB226;
+			remoteInfo = SwizzleBlockeriOS;
+		};
+		22A24DF524BBDC9C00908795 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 2202F3B124BB3B2300BCB226 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 22A24DE124BBDC9C00908795;
+			remoteInfo = SwizzlePopup;
 		};
 /* End PBXContainerItemProxy section */
 
@@ -47,6 +65,14 @@
 		2202F3DD24BB3B4400BCB226 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		2202F3E824BB3BCF00BCB226 /* SwizzleHooks.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SwizzleHooks.m; sourceTree = "<group>"; };
 		2202F3EA24BB3C0D00BCB226 /* SwizzleHooks.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SwizzleHooks.h; sourceTree = "<group>"; };
+		22A24DE224BBDC9C00908795 /* SwizzlePopup.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = SwizzlePopup.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		22A24DE424BBDC9C00908795 /* SwizzlePopup.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SwizzlePopup.h; sourceTree = "<group>"; };
+		22A24DE524BBDC9C00908795 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		22A24DEA24BBDC9C00908795 /* SwizzlePopupTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SwizzlePopupTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		22A24DF124BBDC9C00908795 /* SwizzlePopupTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SwizzlePopupTests.m; sourceTree = "<group>"; };
+		22A24DF324BBDC9C00908795 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		22A24E0024BBDCB400908795 /* SwizzleHooks.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SwizzleHooks.h; sourceTree = "<group>"; };
+		22A24E0124BBDCCC00908795 /* SwizzleHooks.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SwizzleHooks.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -54,7 +80,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				2202F3E124BB3B4400BCB226 /* SwizzleBlocker.framework in Frameworks */,
+				22A24DF724BBDC9C00908795 /* SwizzlePopup.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -62,6 +88,21 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		22A24DDF24BBDC9C00908795 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		22A24DE724BBDC9C00908795 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				22A24DEB24BBDC9C00908795 /* SwizzlePopup.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -73,6 +114,8 @@
 			children = (
 				2202F3BB24BB3B2300BCB226 /* SwizzleBlockeriOS */,
 				2202F3DB24BB3B4400BCB226 /* SwizzleBlocker */,
+				22A24DE324BBDC9C00908795 /* SwizzlePopup */,
+				22A24DF024BBDC9C00908795 /* SwizzlePopupTests */,
 				2202F3BA24BB3B2300BCB226 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -82,6 +125,8 @@
 			children = (
 				2202F3B924BB3B2300BCB226 /* SwizzleBlockeriOS.app */,
 				2202F3DA24BB3B4400BCB226 /* SwizzleBlocker.framework */,
+				22A24DE224BBDC9C00908795 /* SwizzlePopup.framework */,
+				22A24DEA24BBDC9C00908795 /* SwizzlePopupTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -115,6 +160,26 @@
 			path = SwizzleBlocker;
 			sourceTree = "<group>";
 		};
+		22A24DE324BBDC9C00908795 /* SwizzlePopup */ = {
+			isa = PBXGroup;
+			children = (
+				22A24DE424BBDC9C00908795 /* SwizzlePopup.h */,
+				22A24E0024BBDCB400908795 /* SwizzleHooks.h */,
+				22A24E0124BBDCCC00908795 /* SwizzleHooks.m */,
+				22A24DE524BBDC9C00908795 /* Info.plist */,
+			);
+			path = SwizzlePopup;
+			sourceTree = "<group>";
+		};
+		22A24DF024BBDC9C00908795 /* SwizzlePopupTests */ = {
+			isa = PBXGroup;
+			children = (
+				22A24DF124BBDC9C00908795 /* SwizzlePopupTests.m */,
+				22A24DF324BBDC9C00908795 /* Info.plist */,
+			);
+			path = SwizzlePopupTests;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXHeadersBuildPhase section */
@@ -123,6 +188,14 @@
 			buildActionMask = 2147483647;
 			files = (
 				2202F3DE24BB3B4400BCB226 /* SwizzleBlocker.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		22A24DDD24BBDC9C00908795 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				22A24DF424BBDC9C00908795 /* SwizzlePopup.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -140,7 +213,7 @@
 			buildRules = (
 			);
 			dependencies = (
-				2202F3E024BB3B4400BCB226 /* PBXTargetDependency */,
+				22A24DF624BBDC9C00908795 /* PBXTargetDependency */,
 			);
 			name = SwizzleBlockeriOS;
 			productName = SwizzleBlockeriOS;
@@ -165,6 +238,43 @@
 			productReference = 2202F3DA24BB3B4400BCB226 /* SwizzleBlocker.framework */;
 			productType = "com.apple.product-type.framework";
 		};
+		22A24DE124BBDC9C00908795 /* SwizzlePopup */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 22A24DFE24BBDC9C00908795 /* Build configuration list for PBXNativeTarget "SwizzlePopup" */;
+			buildPhases = (
+				22A24DDD24BBDC9C00908795 /* Headers */,
+				22A24DDE24BBDC9C00908795 /* Sources */,
+				22A24DDF24BBDC9C00908795 /* Frameworks */,
+				22A24DE024BBDC9C00908795 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = SwizzlePopup;
+			productName = SwizzlePopup;
+			productReference = 22A24DE224BBDC9C00908795 /* SwizzlePopup.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		22A24DE924BBDC9C00908795 /* SwizzlePopupTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 22A24DFF24BBDC9C00908795 /* Build configuration list for PBXNativeTarget "SwizzlePopupTests" */;
+			buildPhases = (
+				22A24DE624BBDC9C00908795 /* Sources */,
+				22A24DE724BBDC9C00908795 /* Frameworks */,
+				22A24DE824BBDC9C00908795 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				22A24DED24BBDC9C00908795 /* PBXTargetDependency */,
+				22A24DEF24BBDC9C00908795 /* PBXTargetDependency */,
+			);
+			name = SwizzlePopupTests;
+			productName = SwizzlePopupTests;
+			productReference = 22A24DEA24BBDC9C00908795 /* SwizzlePopupTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -179,6 +289,13 @@
 					};
 					2202F3D924BB3B4400BCB226 = {
 						CreatedOnToolsVersion = 11.5;
+					};
+					22A24DE124BBDC9C00908795 = {
+						CreatedOnToolsVersion = 11.5;
+					};
+					22A24DE924BBDC9C00908795 = {
+						CreatedOnToolsVersion = 11.5;
+						TestTargetID = 2202F3B824BB3B2300BCB226;
 					};
 				};
 			};
@@ -197,6 +314,8 @@
 			targets = (
 				2202F3B824BB3B2300BCB226 /* SwizzleBlockeriOS */,
 				2202F3D924BB3B4400BCB226 /* SwizzleBlocker */,
+				22A24DE124BBDC9C00908795 /* SwizzlePopup */,
+				22A24DE924BBDC9C00908795 /* SwizzlePopupTests */,
 			);
 		};
 /* End PBXProject section */
@@ -213,6 +332,20 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 		2202F3D824BB3B4400BCB226 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		22A24DE024BBDC9C00908795 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		22A24DE824BBDC9C00908795 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -241,13 +374,39 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		22A24DDE24BBDC9C00908795 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				22A24E0224BBDCCC00908795 /* SwizzleHooks.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		22A24DE624BBDC9C00908795 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				22A24DF224BBDC9C00908795 /* SwizzlePopupTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
-		2202F3E024BB3B4400BCB226 /* PBXTargetDependency */ = {
+		22A24DED24BBDC9C00908795 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = 2202F3D924BB3B4400BCB226 /* SwizzleBlocker */;
-			targetProxy = 2202F3DF24BB3B4400BCB226 /* PBXContainerItemProxy */;
+			target = 22A24DE124BBDC9C00908795 /* SwizzlePopup */;
+			targetProxy = 22A24DEC24BBDC9C00908795 /* PBXContainerItemProxy */;
+		};
+		22A24DEF24BBDC9C00908795 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 2202F3B824BB3B2300BCB226 /* SwizzleBlockeriOS */;
+			targetProxy = 22A24DEE24BBDC9C00908795 /* PBXContainerItemProxy */;
+		};
+		22A24DF624BBDC9C00908795 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 22A24DE124BBDC9C00908795 /* SwizzlePopup */;
+			targetProxy = 22A24DF524BBDC9C00908795 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
@@ -467,6 +626,94 @@
 			};
 			name = Release;
 		};
+		22A24DFA24BBDC9C00908795 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DEVELOPMENT_TEAM = 4PHTS536MV;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = SwizzlePopup/Info.plist;
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = ch.gymni.SwizzlePopup;
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		22A24DFB24BBDC9C00908795 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DEVELOPMENT_TEAM = 4PHTS536MV;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = SwizzlePopup/Info.plist;
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = ch.gymni.SwizzlePopup;
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		22A24DFC24BBDC9C00908795 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 4PHTS536MV;
+				INFOPLIST_FILE = SwizzlePopupTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = ch.gymni.SwizzlePopupTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/SwizzleBlockeriOS.app/SwizzleBlockeriOS";
+			};
+			name = Debug;
+		};
+		22A24DFD24BBDC9C00908795 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 4PHTS536MV;
+				INFOPLIST_FILE = SwizzlePopupTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = ch.gymni.SwizzlePopupTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/SwizzleBlockeriOS.app/SwizzleBlockeriOS";
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -493,6 +740,24 @@
 			buildConfigurations = (
 				2202F3E424BB3B4400BCB226 /* Debug */,
 				2202F3E524BB3B4400BCB226 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		22A24DFE24BBDC9C00908795 /* Build configuration list for PBXNativeTarget "SwizzlePopup" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				22A24DFA24BBDC9C00908795 /* Debug */,
+				22A24DFB24BBDC9C00908795 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		22A24DFF24BBDC9C00908795 /* Build configuration list for PBXNativeTarget "SwizzlePopupTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				22A24DFC24BBDC9C00908795 /* Debug */,
+				22A24DFD24BBDC9C00908795 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
