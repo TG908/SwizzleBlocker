@@ -29,7 +29,7 @@ void showBanner(NSString *message) {
     viewController.view.backgroundColor = UIColor.clearColor;
 
     UIWindow *window = [[UIWindow alloc] initWithWindowScene:windowScene];
-    CGRect frame = CGRectMake(0, 0, windowScene.screen.bounds.size.width, window.safeAreaInsets.top + 80);
+        CGRect frame = CGRectMake(0, 0, windowScene.screen.bounds.size.width, 2 * window.safeAreaInsets.top + 60);
     window.frame = frame;
     window.windowLevel = UIWindowLevelAlert + 1;
     window.backgroundColor = UIColor.clearColor;
