@@ -24,21 +24,22 @@ void showBanner(NSString *message) {
     NSLog(@"%@", message);
     dispatch_async(dispatch_get_main_queue(), ^{
     UIWindowScene *windowScene = getWindowScene();
-    CGRect frame = CGRectMake(0, 0, windowScene.screen.bounds.size.width, 100);
-    CGRect innerFrame = CGRectInset(frame, 16, 20);
-    CGRect labelFrame = CGRectMake(0, 0, innerFrame.size.width, innerFrame.size.height);
     
     UIViewController *viewController = [[UIViewController alloc] init];
     viewController.view.backgroundColor = UIColor.clearColor;
 
     UIWindow *window = [[UIWindow alloc] initWithWindowScene:windowScene];
+    CGRect frame = CGRectMake(0, 0, windowScene.screen.bounds.size.width, window.safeAreaInsets.top + 80);
     window.frame = frame;
     window.windowLevel = UIWindowLevelAlert + 1;
     window.backgroundColor = UIColor.clearColor;
     window.rootViewController = viewController;
+        
+    CGRect innerFrame = CGRectInset(frame, 16, window.safeAreaInsets.top);
+    CGRect labelFrame = CGRectMake(0, 0, innerFrame.size.width, innerFrame.size.height);
 
     UILabel *label = [[UILabel alloc] initWithFrame:labelFrame];
-    label.backgroundColor = [UIColor colorWithWhite:1.0 alpha:0.7];
+    label.backgroundColor = [UIColor colorWithWhite:1.0 alpha:0.9];
     label.textColor = UIColor.blackColor;
     label.textAlignment = NSTextAlignmentCenter;
     label.text = message;
